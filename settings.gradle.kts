@@ -8,6 +8,8 @@ pluginManagement {
 }
 
 include(
+    ":",
+
     ":modules:example-module:common",
     ":modules:example-module:gateway",
 
