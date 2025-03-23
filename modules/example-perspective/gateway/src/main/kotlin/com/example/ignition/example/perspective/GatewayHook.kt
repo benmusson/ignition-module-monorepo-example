@@ -33,7 +33,7 @@ class GatewayHook : AbstractGatewayModuleHook() {
         modelDelegateRegistry = perspectiveContext.componentModelDelegateRegistry
 
         logger.info("Registering components...")
-        componentRegistry.registerComponent(ExampleComponent.DESCRIPTOR_CLIENT)
+        componentRegistry.registerComponent(ExampleComponent.DESCRIPTOR)
     }
 
     override fun shutdown() {

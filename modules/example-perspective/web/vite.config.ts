@@ -3,11 +3,12 @@ import { globSync } from 'glob'
 import { default as externalGlobals } from 'rollup-plugin-external-globals'
 
 const packageName = 'ExamplePerspective'
-const entryFiles = globSync('src/entry-points/*.ts')
+const entryFiles = globSync('src/index.cjs')
 const globals = {
     react: 'React',
     'react-dom': 'ReactDOM',
     '@inductiveautomation/perspective-client': 'PerspectiveClient',
+    '@inductiveautomation/perspective-designer': 'PerspectiveDesigner',
 }
 
 export default defineConfig(({ mode }) => ({
@@ -20,8 +21,7 @@ export default defineConfig(({ mode }) => ({
         },
         rollupOptions: {
             output: {
-                entryFileNames: `${packageName}-[name].js`,
-                chunkFileNames: `${packageName}-[name].[hash].js`,
+                entryFileNames: `[name].js`,
             },
             plugins: [
                 externalGlobals(globals),

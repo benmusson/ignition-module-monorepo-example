@@ -16,40 +16,25 @@ class ExampleComponent {
                     .getResourceAsStream("/schemas/components/$COMPONENT_ID/props.json")
             )
 
-        private val BROWSER_RESOURCES_CLIENT =
+        private val BROWSER_RESOURCES =
             mutableSetOf(
                 BrowserResource(
                     "ExamplePerspective-client",
-                    "/res/example-module-perspective/ExamplePerspective-loader.js",
+                    "/res/${Meta.SHORT_MODULE_ID}/index.js",
                     BrowserResource.ResourceType.JS,
                 )
             )
 
-        private val BROWSER_RESOURCES_DESIGNER =
-            mutableSetOf(
-                BrowserResource(
-                    "ExamplePerspective-designer",
-                    "/res/example-module-perspective/ExamplePerspective-loader.js",
-                    BrowserResource.ResourceType.JS,
-                )
-            )
-
-        private val descriptorBuilder: ComponentDescriptorImpl.ComponentBuilder =
+        val DESCRIPTOR =
             ComponentDescriptorImpl.ComponentBuilder.newBuilder()
             .setPaletteCategory("Example Perspective Module")
             .setId(COMPONENT_ID)
             .setModuleId(Meta.MODULE_ID)
             .setSchema(SCHEMA)
             .setName("Example Component")
-            .addPaletteEntry("base", "Example Component", "An example component", null, null)
+            .addPaletteEntry("base", "Example Component", "An example component.", null, null)
             .setDefaultMetaName("Example Component")
-
-        val DESCRIPTOR_CLIENT = descriptorBuilder
-            .setResources(BROWSER_RESOURCES_CLIENT)
-            .build()
-
-        val DESCRIPTOR_DESIGNER = descriptorBuilder
-            .setResources(BROWSER_RESOURCES_DESIGNER)
+            .setResources(BROWSER_RESOURCES)
             .build()
     }
 }

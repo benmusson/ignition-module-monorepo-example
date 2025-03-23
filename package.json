@@ -16,13 +16,14 @@
     "npx": "^10"
   },
   "devDependencies": {
+    "example-eslint-config": "*",
     "@nx/gradle": "~20.6",
     "@nx/js": "~20.6",
     "@nx/vite": "~20.6",
     "@nx/web": "~20.6",
     "@vitest/coverage-v8": "~1.6",
     "@vitest/ui": "~3.0",
-    "eslint": "^9",
+    "eslint": "^8",
     "nx": "~20.6",
     "typescript": "~5.8",
     "vite": "~6.2",

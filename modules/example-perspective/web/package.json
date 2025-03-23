@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@inductiveautomation/perspective-client": "2.1.33",
+    "@inductiveautomation/perspective-designer": "2.1.33",
+    "@inductiveautomation/perspective-drawing-common": "2.1.33",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -18,7 +20,7 @@
     "example-tsconfig": "*",
     "@types/react": "^18",
     "@types/node": "^22",
-    "eslint": "^9",
+    "eslint": "^8",
     "glob": "~11.0",
     "rollup-plugin-external-globals": "~0.13",
     "typescript": "~5.8",

@@ -28,7 +28,7 @@ class DesignerHook : AbstractDesignerModuleHook() {
         componentRegistry = pdi.designerComponentRegistry
         delegateRegistry = pdi.componentDesignDelegateRegistry
 
-        componentRegistry.registerComponent(ExampleComponent.DESCRIPTOR_DESIGNER)
+        componentRegistry.registerComponent(ExampleComponent.DESCRIPTOR)
     }
 
     override fun shutdown() {
