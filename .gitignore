@@ -40,3 +40,6 @@ public/dist
 
 # VSCode
 .vscode/*
+
+# NX
+.nx/*

@@ -1,0 +1,28 @@
+{
+  "name": "example-perspective-web",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && nx vite:build && nx vite:test --run",
+    "test": "nx vite:test --run",
+    "lint": "eslint src/**/*.ts"
+  },
+  "dependencies": {
+    "@inductiveautomation/perspective-client": "2.1.33",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "example-eslint-config": "*",
+    "example-tsconfig": "*",
+    "@types/react": "^18",
+    "@types/node": "^22",
+    "eslint": "^9",
+    "glob": "~11.0",
+    "rollup-plugin-external-globals": "~0.13",
+    "typescript": "~5.8",
+    "vite": "~6.2",
+    "vitest": "~3.0"
+  }
+}

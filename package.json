@@ -1,0 +1,32 @@
+{
+  "name": "example",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "gradlew build",
+    "test": "npx nx run-many -t test",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "release": "gradlew release"
+  },
+  "workspaces": [
+    "libraries/**",
+    "modules/**"
+  ],
+  "dependencies": {
+    "npx": "^10"
+  },
+  "devDependencies": {
+    "@nx/gradle": "~20.6",
+    "@nx/js": "~20.6",
+    "@nx/vite": "~20.6",
+    "@nx/web": "~20.6",
+    "@vitest/coverage-v8": "~1.6",
+    "@vitest/ui": "~3.0",
+    "eslint": "^9",
+    "nx": "~20.6",
+    "typescript": "~5.8",
+    "vite": "~6.2",
+    "vitest": "~3.0"
+  },
+  "packageManager": "yarn@1.22.19"
+}
