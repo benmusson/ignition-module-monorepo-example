@@ -20,7 +20,7 @@ class ExampleComponent {
             mutableSetOf(
                 BrowserResource(
                     "ExamplePerspective-client",
-                    "/res/example-module-perspective/ExamplePerspective-client.js",
+                    "/res/example-module-perspective/ExamplePerspective-loader.js",
                     BrowserResource.ResourceType.JS,
                 )
             )
@@ -29,7 +29,7 @@ class ExampleComponent {
             mutableSetOf(
                 BrowserResource(
                     "ExamplePerspective-designer",
-                    "/res/example-module-perspective/ExamplePerspective-designer.js",
+                    "/res/example-module-perspective/ExamplePerspective-loader.js",
                     BrowserResource.ResourceType.JS,
                 )
             )
