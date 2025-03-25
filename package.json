@@ -15,6 +15,7 @@
   "devDependencies": {
     "@nx/gradle": "~20.6",
     "@nx/js": "~20.6",
+    "@nx/rollup": "~20.6",
     "@nx/vite": "~20.6",
     "@nx/web": "~20.6",
     "@vitest/coverage-v8": "~1.6",

@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "build": "tsc && nx vite:build && nx vite:test --run",
+    "build": "rollup -c",
     "test": "nx vite:test --run",
     "lint": "eslint src/**/*.ts"
   },
@@ -23,6 +23,10 @@
     "@types/node": "^22",
     "eslint": "^8",
     "glob": "~11.0",
+    "rollup": "^4",
+    "@rollup/plugin-commonjs": "^28",
+    "@rollup/plugin-terser": "~0.4",
+    "@rollup/plugin-typescript": "^12",
     "rollup-plugin-external-globals": "~0.13",
     "typescript": "~5.8",
     "vite": "~6.2",
