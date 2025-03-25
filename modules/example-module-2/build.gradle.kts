@@ -17,8 +17,8 @@ ignitionModule {
 
     projectScopes.putAll(
         mapOf(
-            ":modules:example-module2:common" to "GD",
-            ":modules:example-module2:gateway" to "G",
+            ":modules:example-module-2:common" to "GD",
+            ":modules:example-module-2:gateway" to "G",
         ),
     )
 

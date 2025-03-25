@@ -1,0 +1,4 @@
+{
+  "extends": "@monorepo-example/tsconfig/vite.json",
+  "include": ["src"]
+}
