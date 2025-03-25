@@ -1,5 +1,7 @@
-if (window._perspective_designer) {
-  import('./designer.ts')
+import { isPerspectiveDesigner } from './util'
+
+if (isPerspectiveDesigner()) {
+  import('./scopes/designer.ts')
 } else {
-  import('./client.ts')
+  import('./scopes/client.ts')
 }

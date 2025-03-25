@@ -13,8 +13,8 @@ include(
     ":modules:example-module:common",
     ":modules:example-module:gateway",
 
-    ":modules:example-module2:common",
-    ":modules:example-module2:gateway",
+    ":modules:example-module-2:common",
+    ":modules:example-module-2:gateway",
 
     ":modules:example-perspective:common",
     ":modules:example-perspective:designer",
