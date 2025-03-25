@@ -16,8 +16,9 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "example-eslint-config": "*",
-    "example-tsconfig": "*",
+    "@monorepo-example/eslint-config": "*",
+    "@monorepo-example/tsconfig": "*",
+    "@monorepo-example/vite-config": "*",
     "@types/react": "^18",
     "@types/node": "^22",
     "eslint": "^8",

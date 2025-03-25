@@ -19,15 +19,15 @@ class ExampleComponent {
         private val BROWSER_RESOURCES =
             mutableSetOf(
                 BrowserResource(
-                    "ExamplePerspective-client",
-                    "/res/${Meta.SHORT_MODULE_ID}/index.js",
+                    "ExamplePerspective",
+                    "/res/${Meta.SHORT_MODULE_ID}/ExamplePerspective.js",
                     BrowserResource.ResourceType.JS,
                 )
             )
 
         val DESCRIPTOR =
             ComponentDescriptorImpl.ComponentBuilder.newBuilder()
-            .setPaletteCategory("Example Perspective Module")
+            .setPaletteCategory("Examples")
             .setId(COMPONENT_ID)
             .setModuleId(Meta.MODULE_ID)
             .setSchema(SCHEMA)

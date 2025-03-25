@@ -12,11 +12,7 @@
     "libraries/**",
     "modules/**"
   ],
-  "dependencies": {
-    "npx": "^10"
-  },
   "devDependencies": {
-    "example-eslint-config": "*",
     "@nx/gradle": "~20.6",
     "@nx/js": "~20.6",
     "@nx/vite": "~20.6",
@@ -25,6 +21,8 @@
     "@vitest/ui": "~3.0",
     "eslint": "^8",
     "nx": "~20.6",
+    "npx": "^10",
+    "prettier": "^3",
     "typescript": "~5.8",
     "vite": "~6.2",
     "vitest": "~3.0"

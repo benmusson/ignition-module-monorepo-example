@@ -1,6 +1,6 @@
 module.exports = {
     root: true,
-    extends: ['example-eslint-config'],
+    extends: ['@monorepo-example/eslint-config'],
     env: {
         browser: true,
         commonjs: true,

@@ -1,5 +1,5 @@
 {
-  "name": "example-tsconfig",
+  "name": "@monorepo-example/tsconfig",
   "version": "0.2.0",
   "private": true
 }
