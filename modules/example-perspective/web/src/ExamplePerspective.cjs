@@ -1,5 +1,5 @@
 if (window._perspective_designer) {
-  import("./designer.ts");
+  import('./designer.ts')
 } else {
-  import("./client.ts");
+  import('./client.ts')
 }

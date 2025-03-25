@@ -5,7 +5,7 @@
   "scripts": {
     "build": "gradlew build",
     "test": "npx nx run-many -t test",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,js,cjs,mjs,jsx}\"",
     "release": "gradlew release"
   },
   "workspaces": [
