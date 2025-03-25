@@ -1,8 +1,7 @@
-import {ComponentRegistry} from "@inductiveautomation/perspective-client";
+import { ComponentRegistry } from '@inductiveautomation/perspective-client'
 
-import { ExampleComponent, ExampleComponentMeta } from "./components";
+import { ExampleComponent, ExampleComponentMeta } from './components'
 import { sharedUtility } from './util'
-
 
 export { ExampleComponent }
 ComponentRegistry.register(ExampleComponentMeta)

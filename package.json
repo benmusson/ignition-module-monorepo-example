@@ -13,7 +13,6 @@
     "modules/**"
   ],
   "devDependencies": {
-    "example-eslint-config": "*",
     "@nx/gradle": "~20.6",
     "@nx/js": "~20.6",
     "@nx/vite": "~20.6",
