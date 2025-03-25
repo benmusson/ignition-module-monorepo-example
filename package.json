@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "gradlew build",
+    "build": "yarn run format && gradlew build",
     "test": "npx nx run-many -t test",
     "format": "prettier --write \"**/*.{ts,tsx,js,cjs,mjs,jsx}\"",
     "release": "gradlew release"
