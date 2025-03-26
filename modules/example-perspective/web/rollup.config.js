@@ -1,5 +1,5 @@
-import { createPerspectiveConfig } from '@monorepo-example/rollup-config'
+import { createPerspectiveOutputs } from '@monorepo-example/rollup-config'
 
-export default createPerspectiveConfig({
-  entry: 'src/ExamplePerspective.cjs',
+export default createPerspectiveOutputs({
+  entry: 'src/ExamplePerspectiveModule.cjs',
 })

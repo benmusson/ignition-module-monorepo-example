@@ -2,8 +2,6 @@
   "extends": "@monorepo-example/tsconfig/rollup.json",
   "include": ["src"],
   "compilerOptions": {
-    "outDir": "dist",
-    "sourceMap": false,
-    "declaration": false
+    "outDir": "dist"
   }
 }

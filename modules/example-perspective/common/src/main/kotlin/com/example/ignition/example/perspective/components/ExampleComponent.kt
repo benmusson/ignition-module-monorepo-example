@@ -19,9 +19,14 @@ class ExampleComponent {
         private val BROWSER_RESOURCES =
             mutableSetOf(
                 BrowserResource(
-                    "ExamplePerspective",
-                    "/res/${Meta.SHORT_MODULE_ID}/ExamplePerspective.js",
+                    "ExamplePerspectiveModule",
+                    "/res/${Meta.SHORT_MODULE_ID}/ExamplePerspectiveModule.js",
                     BrowserResource.ResourceType.JS,
+                ),
+                BrowserResource(
+                    "ExamplePerspectiveModuleCSS",
+                    "/res/${Meta.SHORT_MODULE_ID}/ExamplePerspectiveModule.css",
+                    BrowserResource.ResourceType.CSS,
                 )
             )
 

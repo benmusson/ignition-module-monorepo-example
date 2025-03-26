@@ -5,28 +5,20 @@
   "scripts": {
     "build": "yarn run format && gradlew build",
     "test": "npx nx run-many -t test",
-    "format": "prettier --write \"**/*.{ts,tsx,js,cjs,mjs,jsx}\"",
-    "release": "gradlew release"
+    "format": "prettier --write \"**/*.{ts,tsx,js,cjs,mjs,jsx}\""
   },
   "workspaces": [
     "libraries/**",
     "modules/**"
   ],
   "devDependencies": {
-    "@nx/gradle": "~20.6",
     "@nx/js": "~20.6",
-    "@nx/rollup": "~20.6",
-    "@nx/vite": "~20.6",
     "@nx/web": "~20.6",
-    "@vitest/coverage-v8": "~1.6",
-    "@vitest/ui": "~3.0",
     "eslint": "^8",
     "nx": "~20.6",
     "npx": "^10",
     "prettier": "^3",
-    "typescript": "~5.8",
-    "vite": "~6.2",
-    "vitest": "~3.0"
+    "typescript": "~5.8"
   },
   "packageManager": "yarn@1.22.19"
 }

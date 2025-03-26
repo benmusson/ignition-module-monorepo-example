@@ -4,9 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "build": "rollup -c",
-    "test": "nx vite:test --run",
-    "lint": "eslint src/**/*.ts"
+    "build": "rollup -c"
   },
   "dependencies": {
     "@inductiveautomation/perspective-client": "2.1.33",
