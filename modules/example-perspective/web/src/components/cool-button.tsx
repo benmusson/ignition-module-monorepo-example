@@ -1,9 +1,6 @@
 import {
-  AbstractUIElementStore,
   ComponentMeta,
   ComponentProps,
-  ComponentStoreDelegate,
-  JsObject,
   PComponent,
   PropertyTree,
   SizeObject,
@@ -11,35 +8,32 @@ import {
 } from '@inductiveautomation/perspective-client'
 import React from 'react'
 
+import './cool-button.css'
+
 type ExampleComponentProps = {
   text: string
   style: StyleObject
 }
 
-export function ExampleComponent(props: ComponentProps<ExampleComponentProps>) {
-  return <div {...props.emit()}>{props.props.text}</div>
-}
-
-export class ExampleComponentDelegate extends ComponentStoreDelegate {
-  handleEvent(eventName: string, eventObject: JsObject): void {
-    console.log(`Received event ${eventName}:`, eventObject)
-  }
+export function CoolButton(props: ComponentProps<ExampleComponentProps>) {
+  return (
+    <div {...props.emit()}>
+      <button className="cool-button" style={{ width: '100%', height: '100%' }}>
+        {props.props.text}
+      </button>
+    </div>
+  )
 }
 
 export const ExampleComponentMeta: ComponentMeta = {
   getComponentType: function (): string {
-    return 'example.component'
+    return 'example.cool-button'
   },
   getDefaultSize: function (): SizeObject {
     return {
       width: 300,
       height: 300,
     }
-  },
-  createDelegate: function (
-    component: AbstractUIElementStore
-  ): ComponentStoreDelegate {
-    return new ExampleComponentDelegate(component)
   },
   getPropsReducer(tree: PropertyTree): ExampleComponentProps {
     return {
@@ -48,6 +42,6 @@ export const ExampleComponentMeta: ComponentMeta = {
     } as never
   },
   getViewComponent: function (): PComponent {
-    return ExampleComponent as PComponent
+    return CoolButton as PComponent
   },
 }

@@ -1,4 +1,7 @@
 {
-  "extends": "@monorepo-example/tsconfig/vite.json",
-  "include": ["src"]
+  "extends": "@monorepo-example/tsconfig/rollup.json",
+  "include": ["src"],
+  "compilerOptions": {
+    "outDir": "dist"
+  }
 }

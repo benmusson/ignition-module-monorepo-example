@@ -6,9 +6,9 @@ import com.inductiveautomation.perspective.common.api.BrowserResource
 import com.inductiveautomation.perspective.common.api.ComponentDescriptor
 import com.inductiveautomation.perspective.common.api.ComponentDescriptorImpl
 
-class ExampleComponent {
+class CoolButton {
     companion object {
-        const val COMPONENT_ID: String = "example.component"
+        const val COMPONENT_ID: String = "example.cool-button"
         private val SCHEMA: JsonSchema =
             JsonSchema.parse(
                 Meta::class
@@ -16,25 +16,16 @@ class ExampleComponent {
                     .getResourceAsStream("/schemas/components/$COMPONENT_ID/props.json")
             )
 
-        private val BROWSER_RESOURCES =
-            mutableSetOf(
-                BrowserResource(
-                    "ExamplePerspective",
-                    "/res/${Meta.SHORT_MODULE_ID}/ExamplePerspective.js",
-                    BrowserResource.ResourceType.JS,
-                )
-            )
-
-        val DESCRIPTOR =
+        val DESCRIPTOR: ComponentDescriptor =
             ComponentDescriptorImpl.ComponentBuilder.newBuilder()
             .setPaletteCategory("Examples")
             .setId(COMPONENT_ID)
             .setModuleId(Meta.MODULE_ID)
             .setSchema(SCHEMA)
-            .setName("Example Component")
-            .addPaletteEntry("base", "Example Component", "An example component.", null, null)
-            .setDefaultMetaName("Example Component")
-            .setResources(BROWSER_RESOURCES)
+            .setName("Cool Button")
+            .addPaletteEntry("base", "Cool Button", "A really cool button.", null, null)
+            .setDefaultMetaName("Cool Button")
+            .setResources(Meta.BROWSER_RESOURCES)
             .build()
     }
 }
