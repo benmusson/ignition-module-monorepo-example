@@ -1,6 +1,6 @@
 package com.example.ignition.example.perspective
 
-import com.example.ignition.example.perspective.components.ExampleComponent
+import com.example.ignition.example.perspective.components.CoolButton
 import com.inductiveautomation.ignition.common.licensing.LicenseState
 import com.inductiveautomation.ignition.designer.model.AbstractDesignerModuleHook
 import com.inductiveautomation.ignition.designer.model.DesignerContext
@@ -20,7 +20,7 @@ class DesignerHook : AbstractDesignerModuleHook() {
     private lateinit var delegateRegistry: ComponentDesignDelegateRegistry
 
     override fun startup(context: DesignerContext, activationState: LicenseState) {
-        logger.info("Example module '${Meta.SHORT_MODULE_ID}' starting...")
+        logger.debug("Example module '${Meta.SHORT_MODULE_ID}' starting...")
         this.context = context
 
         val pdi: PerspectiveDesignerInterface = PerspectiveDesignerInterface.get(context)
@@ -28,13 +28,13 @@ class DesignerHook : AbstractDesignerModuleHook() {
         componentRegistry = pdi.designerComponentRegistry
         delegateRegistry = pdi.componentDesignDelegateRegistry
 
-        componentRegistry.registerComponent(ExampleComponent.DESCRIPTOR)
+        componentRegistry.registerComponent(CoolButton.DESCRIPTOR)
     }
 
     override fun shutdown() {
-        logger.info("Example module '${Meta.SHORT_MODULE_ID}' stopping...")
+        logger.debug("Example module '${Meta.SHORT_MODULE_ID}' stopping...")
 
-        logger.info("Removing components...")
-        componentRegistry.removeComponent(ExampleComponent.COMPONENT_ID)
+        logger.debug("Removing components...")
+        componentRegistry.removeComponent(CoolButton.COMPONENT_ID)
     }
 }

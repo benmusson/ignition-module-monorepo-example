@@ -1,6 +1,6 @@
 package com.example.ignition.example.perspective
 
-import com.example.ignition.example.perspective.components.ExampleComponent
+import com.example.ignition.example.perspective.components.CoolButton
 import com.inductiveautomation.ignition.common.licensing.LicenseState
 import com.inductiveautomation.ignition.gateway.model.AbstractGatewayModuleHook
 import com.inductiveautomation.ignition.gateway.model.GatewayContext
@@ -26,21 +26,21 @@ class GatewayHook : AbstractGatewayModuleHook() {
     }
 
     override fun startup(activationState: LicenseState) {
-        logger.info("Example module '${Meta.SHORT_MODULE_ID}' starting...")
+        logger.debug("Example module '${Meta.SHORT_MODULE_ID}' starting...")
 
         perspectiveContext = PerspectiveContext.get(this.context)
         componentRegistry = perspectiveContext.componentRegistry
         modelDelegateRegistry = perspectiveContext.componentModelDelegateRegistry
 
-        logger.info("Registering components...")
-        componentRegistry.registerComponent(ExampleComponent.DESCRIPTOR)
+        logger.debug("Registering components...")
+        componentRegistry.registerComponent(CoolButton.DESCRIPTOR)
     }
 
     override fun shutdown() {
-        logger.info("Example module '${Meta.SHORT_MODULE_ID}' stopping...")
+        logger.debug("Example module '${Meta.SHORT_MODULE_ID}' stopping...")
 
-        logger.info("Removing components...")
-        componentRegistry.removeComponent(ExampleComponent.COMPONENT_ID)
+        logger.debug("Removing components...")
+        componentRegistry.removeComponent(CoolButton.COMPONENT_ID)
     }
 
     override fun getMountedResourceFolder(): Optional<String> {

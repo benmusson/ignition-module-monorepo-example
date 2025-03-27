@@ -8,24 +8,26 @@ import {
 } from '@inductiveautomation/perspective-client'
 import React from 'react'
 
-import './example-component.css'
+import './cool-button.css'
 
 type ExampleComponentProps = {
   text: string
   style: StyleObject
 }
 
-export function ExampleComponent(props: ComponentProps<ExampleComponentProps>) {
+export function CoolButton(props: ComponentProps<ExampleComponentProps>) {
   return (
     <div {...props.emit()}>
-      <button className="cool-button">{props.props.text}</button>
+      <button className="cool-button" style={{ width: '100%', height: '100%' }}>
+        {props.props.text}
+      </button>
     </div>
   )
 }
 
 export const ExampleComponentMeta: ComponentMeta = {
   getComponentType: function (): string {
-    return 'example.component'
+    return 'example.cool-button'
   },
   getDefaultSize: function (): SizeObject {
     return {
@@ -40,6 +42,6 @@ export const ExampleComponentMeta: ComponentMeta = {
     } as never
   },
   getViewComponent: function (): PComponent {
-    return ExampleComponent as PComponent
+    return CoolButton as PComponent
   },
 }

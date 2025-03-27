@@ -38,7 +38,7 @@ export function createPerspectiveOutputs(options: PerspectiveConfigOptions) {
     {
       input: options.entry,
       output: {
-        file: `dist/${name}.js`, // Main entry point is built as CJS format and used as a BrowserResource
+        file: `dist/${name}.js`, // Main entry point should be CommonJS format
         format: 'cjs',
         exports: 'auto',
         sourcemap: false,
@@ -50,7 +50,7 @@ export function createPerspectiveOutputs(options: PerspectiveConfigOptions) {
     {
       input: options.entry,
       output: {
-        dir: 'dist', // All other files are built as ES Modules
+        dir: 'dist', // All other files should be ES Modules
         format: 'es',
         sourcemap: false,
         chunkFileNames: `${name}-[name].js`,
